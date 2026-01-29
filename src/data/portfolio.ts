@@ -1,7 +1,7 @@
 import { Experience, Project, Skill } from "@/types";
 
 export const portfolioData = {
-  name: "Vuyisile Shokane",
+  name: "Vuyisile Thato Shokane",
   title: "Full-Stack Web Developer",
   subtitle: "Building scalable digital solutions with clean, maintainable code",
   bio: "Graduate Computer Science student passionate about web development and solving complex problems. Experienced in designing and developing responsive, user-focused applications. Proven ability to work in teams, analyze requirements, and translate them into functional solutions. Background in IT support and AV systems strengthens my systems thinking and troubleshooting skills.",
