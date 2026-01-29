@@ -52,16 +52,37 @@ export default function Skills() {
         {/* Stats Section */}
         <div className="mt-20 grid md:grid-cols-4 gap-6">
           {[
-            { icon: '💻', number: '8+', label: 'Programming Languages' },
-            { icon: '⚙️', number: '15+', label: 'Frameworks & Tools' },
-            { icon: '📅', number: '3+', label: 'Years Experience' },
-            { icon: '🎯', number: '5+', label: 'Completed Projects' }
+            { icon: 'code', number: '8+', label: 'Programming Languages' },
+            { icon: 'tool', number: '15+', label: 'Frameworks & Tools' },
+            { icon: 'calendar', number: '3+', label: 'Years Experience' },
+            { icon: 'target', number: '5+', label: 'Completed Projects' }
           ].map((stat, idx) => (
             <div
               key={idx}
               className="relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 p-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all text-center group hover:shadow-2xl hover:shadow-purple-500/10"
             >
-              <div className="text-4xl mb-3">{stat.icon}</div>
+              <div className="flex justify-center mb-3">
+                {stat.icon === 'code' && (
+                  <svg className="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )}
+                {stat.icon === 'tool' && (
+                  <svg className="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                  </svg>
+                )}
+                {stat.icon === 'calendar' && (
+                  <svg className="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {stat.icon === 'target' && (
+                  <svg className="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                )}
+              </div>
               <div className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
