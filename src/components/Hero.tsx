@@ -107,7 +107,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl overflow-hidden border-2 border-purple-500/50 shadow-2xl">
                 <img 
-                  src="/profile.jpg" 
+                  src="/portfolio/profile.jpg" 
                   alt="Vuyisile Shokane"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
