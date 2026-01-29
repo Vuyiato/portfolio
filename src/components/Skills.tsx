@@ -2,45 +2,72 @@ import { skills } from '@/data/portfolio';
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">Skills & Technologies</h2>
+    <section id="skills" className="py-20 bg-slate-950">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="mb-16">
+          <div className="inline-block px-4 py-2 bg-purple-500/20 rounded-full border border-purple-400/50 mb-4">
+            <p className="text-sm font-bold text-purple-300">Expertise</p>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent mb-4">
+            Skills & Technologies
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl">
+            A comprehensive toolkit of technologies and methodologies I use to build powerful solutions
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skillGroup) => (
             <div
               key={skillGroup.category}
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
+              className="group relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{skillGroup.category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skillGroup.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
-                  >
-                    {skill}
+              {/* Gradient shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v4h8v-4zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                    </svg>
                   </span>
-                ))}
+                  {skillGroup.category}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {skillGroup.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-100 text-sm font-semibold rounded-lg border border-purple-400/30 hover:from-purple-500/40 hover:to-blue-500/40 hover:border-purple-400/60 transition-all duration-200 cursor-default hover:scale-105 transform"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-lg text-center border border-gray-200 dark:border-gray-800">
-            <p className="text-4xl font-bold text-blue-600 dark:text-blue-400">8+</p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Programming Languages</p>
-          </div>
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-lg text-center border border-gray-200 dark:border-gray-800">
-            <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">3+</p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Years of Experience</p>
-          </div>
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-lg text-center border border-gray-200 dark:border-gray-800">
-            <p className="text-4xl font-bold text-pink-600 dark:text-pink-400">5+</p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Completed Projects</p>
-          </div>
+        {/* Stats Section */}
+        <div className="mt-20 grid md:grid-cols-4 gap-6">
+          {[
+            { icon: '💻', number: '8+', label: 'Programming Languages' },
+            { icon: '⚙️', number: '15+', label: 'Frameworks & Tools' },
+            { icon: '📅', number: '3+', label: 'Years Experience' },
+            { icon: '🎯', number: '5+', label: 'Completed Projects' }
+          ].map((stat, idx) => (
+            <div
+              key={idx}
+              className="relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 p-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all text-center group hover:shadow-2xl hover:shadow-purple-500/10"
+            >
+              <div className="text-4xl mb-3">{stat.icon}</div>
+              <div className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+                {stat.number}
+              </div>
+              <p className="text-gray-400 font-medium">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
