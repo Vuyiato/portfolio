@@ -11,6 +11,8 @@ export interface Project {
   description: string;
   technologies: string[];
   link?: string;
+  demo?: string;
+  admin?: string;
   github?: string;
   featured?: boolean;
 }

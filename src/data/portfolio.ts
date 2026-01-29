@@ -79,6 +79,9 @@ export const projects: Project[] = [
     description: "Cross-platform healthcare solution for a dermatology clinic featuring real-time appointment scheduling, secure document sharing, and data-driven patient triage. Led development of a 3-member team with comprehensive requirements analysis and system design.",
     technologies: ["Flutter", "Firebase", "Dart", "Cloud Firestore"],
     featured: true,
+    demo: "https://portal.dermaglare.co.za/",
+    admin: "https://admin.dermaglare.co.za/",
+    link: "https://dermaglare.co.za/",
   },
   {
     title: "Arthaus E-Commerce Platform",
