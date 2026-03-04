@@ -4,7 +4,7 @@ export const portfolioData = {
   name: "Vuyisile Thato Shokane",
   title: "Full-Stack Developer & Founder",
   subtitle: "I build purpose-driven software that automates operations, scales businesses, and solves real problems. Founder of ContentWall Systems.",
-  bio: "Computer Science graduate and founder of ContentWall Systems — a software company that engineers integrated systems for businesses across South Africa. I specialize in building scalable web platforms, field service automation tools, and enterprise workflow systems. My background spans full-stack development, systems design, and AV production engineering.",
+  bio: "Computer Science graduate and founder of ContentWall Systems - a software company that engineers integrated systems for businesses across South Africa. I specialize in building scalable web platforms, field service automation tools, and enterprise workflow systems. My background spans full-stack development, systems design, and AV production engineering.",
   email: "vuyiato1@gmail.com",
   phone: "0723012788",
   github: "https://github.com/VUYIATO",

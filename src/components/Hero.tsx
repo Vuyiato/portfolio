@@ -81,10 +81,19 @@ export default function Hero() {
             >
               <span className="text-white">I build</span>
               <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">
-                {roles[roleIndex].substring(0, charIndex)}
+              <span className="relative inline-block">
+                {/* Invisible text to reserve space for the longest role */}
+                <span className="invisible" aria-hidden="true">
+                  {roles.reduce((a, b) => a.length >= b.length ? a : b)}
+                </span>
+                {/* Visible typing text positioned on top */}
+                <span className="absolute left-0 top-0 whitespace-nowrap">
+                  <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">
+                    {roles[roleIndex].substring(0, charIndex)}
+                  </span>
+                  <span className="inline-block w-[3px] h-[0.8em] bg-purple-400 animate-blink align-middle"></span>
+                </span>
               </span>
-              <span className="inline-block w-[3px] h-[0.8em] bg-purple-400 ml-1 animate-blink align-middle"></span>
             </h1>
 
             {/* Subtitle */}
