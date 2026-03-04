@@ -120,7 +120,7 @@ export const education = {
   school: "Eduvos University",
   degree: "Bachelor of Science in Computer Science",
   gpa: "3.7",
-  graduationYear: "2025",
+  graduationYear: "2026",
   coursework: [
     "Software Engineering",
     "Database Management",

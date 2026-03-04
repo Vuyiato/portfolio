@@ -5,7 +5,7 @@ import { Reveal, GradientDivider } from './AnimatedElements';
 import { useCounter } from '@/hooks/useAnimations';
 
 export default function About() {
-  const gradYear = useCounter(2025, 1500);
+  const gradYear = useCounter(2026, 1500);
   const gpa = useCounter(37, 1500); // multiply by 10 for 3.7
   const techCount = useCounter(8, 1200);
 
