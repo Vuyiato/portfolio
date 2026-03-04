@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020617;
+  --foreground: #e2e8f0;
 }
 
 @theme inline {
@@ -10,13 +10,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -30,39 +23,25 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar — dark theme */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #a78bfa, #60a5fa);
-  border-radius: 5px;
+  background: #334155;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #9333ea, #3b82f6);
+  background: #475569;
 }
 
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-track {
-    background: #1a1a1a;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #a78bfa, #60a5fa);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #9333ea, #3b82f6);
-  }
-}
-
-/* Smooth animations */
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -75,64 +54,37 @@ html {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
-  }
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
 }
 
-/* Selection color */
+/* Selection */
 ::selection {
-  background-color: #a855f7;
+  background-color: rgba(139, 92, 246, 0.4);
   color: white;
 }
 
 ::-moz-selection {
-  background-color: #a855f7;
+  background-color: rgba(139, 92, 246, 0.4);
   color: white;
 }
 
-/* Smooth link transitions */
-a {
-  transition: all 0.3s ease;
-}
-
-/* Better focus states for accessibility */
+/* Focus states */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #a855f7;
+  outline: 2px solid rgba(139, 92, 246, 0.6);
   outline-offset: 2px;
-}
-
-/* Gradient text */
-.bg-gradient-to-r {
-  background-clip: text;
-}
-
-/* Smooth hover effects */
-button,
-a {
-  position: relative;
 }
 
 /* Animation utilities */
@@ -148,12 +100,7 @@ a {
   animation-delay: 4s;
 }
 
-/* Improve image rendering */
-img {
-  image-rendering: -webkit-optimize-contrast;
-}
-
-/* Better form inputs */
+/* Form inputs — dark theme */
 input,
 textarea,
 select {
@@ -164,6 +111,6 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
-  border-color: #a855f7;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
 }
