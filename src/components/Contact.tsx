@@ -1,4 +1,7 @@
+'use client';
+
 import { portfolioData } from '@/data/portfolio';
+import { Reveal, GradientDivider } from './AnimatedElements';
 
 export default function Contact() {
   return (
@@ -6,18 +9,23 @@ export default function Contact() {
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.1)_0%,transparent_60%)]"></div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-purple-400 uppercase tracking-widest mb-3">Contact</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Let&apos;s Work Together</h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Got a project in mind? I&apos;d love to hear about it. Reach out and let&apos;s build something great.
-          </p>
-        </div>
+      <GradientDivider />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10 pt-8">
+        <Reveal>
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-purple-400 uppercase tracking-widest mb-3">Contact</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Let&apos;s Work Together</h2>
+            <p className="text-gray-400 text-lg max-w-xl mx-auto">
+              Got a project in mind? I&apos;d love to hear about it. Reach out and let&apos;s build something great.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Contact Form */}
-          <form className="space-y-5 bg-white/[0.02] border border-white/[0.06] rounded-2xl p-8">
+          <Reveal delay={100} direction="left">
+          <form className="space-y-5 bg-white/[0.02] border border-white/[0.06] rounded-2xl p-8 hover:border-white/[0.12] transition-all duration-500">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
               <input
@@ -55,8 +63,10 @@ export default function Contact() {
               Send Message
             </button>
           </form>
+          </Reveal>
 
           {/* Contact Info */}
+          <Reveal delay={200} direction="right">
           <div className="space-y-6">
             <a
               href={`mailto:${portfolioData.email}`}
@@ -119,6 +129,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>
