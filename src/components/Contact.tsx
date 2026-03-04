@@ -6,9 +6,6 @@ import { Reveal, GradientDivider } from './AnimatedElements';
 export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-slate-950 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.1)_0%,transparent_60%)]"></div>
-
       <GradientDivider />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10 pt-8">

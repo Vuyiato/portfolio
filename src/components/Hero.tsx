@@ -2,7 +2,6 @@
 
 import { portfolioData } from '@/data/portfolio';
 import { useState, useEffect } from 'react';
-import { FloatingParticles } from './AnimatedElements';
 
 const roles = ['software that scales.', 'systems that automate.', 'products that matter.'];
 
@@ -37,9 +36,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-slate-950 pt-20 overflow-hidden">
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-      
       {/* Radial gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.15)_0%,transparent_70%)]"></div>
       
@@ -47,9 +43,6 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full filter blur-[120px] animate-blob"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full filter blur-[120px] animate-blob animation-delay-2000"></div>
       <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-600/10 rounded-full filter blur-[100px] animate-blob animation-delay-4000"></div>
-
-      {/* Floating particles */}
-      <FloatingParticles />
 
       {/* Geometric shapes — floating 3D decorators */}
       <div className="absolute top-20 right-[15%] w-16 h-16 border border-purple-500/20 rounded-lg animate-spin-slow" style={{ animationDuration: '20s' }}></div>

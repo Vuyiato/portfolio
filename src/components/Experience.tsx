@@ -6,9 +6,6 @@ import { Reveal, GradientDivider } from './AnimatedElements';
 export default function Experience() {
   return (
     <section id="experience" className="py-24 bg-slate-950 relative overflow-hidden">
-      {/* Subtle background */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-
       <GradientDivider />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10 pt-8">
